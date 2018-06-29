@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>无标题文档</title>
+<link href="css/shop-mobile.css" rel="stylesheet" type="text/css">
+<!--首页幻灯js-->
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<!--首页幻灯js end-->
+</head>
+
+<body>
+<!--轮播图-->
+<div class="banner">
+    <div class="banner openwebview" >
+	    <div style="-webkit-transform:translate3d(0,0,0);">
+		<div id="banner_box" class="box_swipe">
+			<ul style="list-style: none outside none; transition-duration: 500ms;">
+					<li>
+						<a href="">
+							<img src="images/636116991860710297302262981.png" alt="2" style="width:100%;">
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/636116991860710297302262981.png" alt="2" style="width:100%;">
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/636116991860710297302262981.png" alt="2" style="width:100%;">
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="images/636116991860710297302262981.png" alt="2" style="width:100%;">
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/636116991860710297302262981.png" alt="2" style="width:100%;">
+						</a>
+					</li>
+							</ul>
+			<ol>
+									
+				<li class="on"></li>
+				<li></li>
+			</ol>
+		</div>
+	</div>
+    </div>
+		<script>
+		$(function(){
+			new Swipe(document.getElementById('banner_box'), {
+				speed:500,
+				auto:3000,
+				callback: function(){
+					var lis = $(this.element).next("ol").children();
+					lis.removeClass("on").eq(this.index).addClass("on");
+				}
+			});
+		});
+	</script>
+
+</div>
+</body>
+</html>
